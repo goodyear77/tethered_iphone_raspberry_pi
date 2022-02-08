@@ -39,25 +39,25 @@ Bridge=br0
 
 9. Add to the top:
 
-## Disable DHCP on interfaces that are bridged:
+# Disable DHCP on interfaces that are bridged:
 denyinterfaces eth0 eth1
 
 10. Comment out following:
 
-## It is possible to fall back to a static IP if DHCP fails:
-## define static profile
+# It is possible to fall back to a static IP if DHCP fails:
+# define static profile
 profile static_eth0
 static ip_address=192.168.0.65/24
 static routers=192.168.0.1
 static domain_name_servers=192.168.0.1
 
-## fallback to static profile on eth0
+# fallback to static profile on eth0
 interface eth0
 fallback static_eth0
 
 11. Add as last lines:
 
-## Add bridged interface:
+# Add bridged interface:
 interface br0
 
 12. Reboot: **sudo reboot now**
