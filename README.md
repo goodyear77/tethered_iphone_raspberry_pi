@@ -1,6 +1,8 @@
 # tethered_iphone_raspberry_pi
 How to setup Internet sharing with an iPhone and raspberry pi
 
+View below with "source blob" in Github to get correct formatting.
+
 1. Install Raspian on raspberry pi
 2. Update and upgrade system: **sudo apt update & sudo apt upgrade**
 3. Install usb handler to connect iPhone: **sudo apt install usbmuxd**
