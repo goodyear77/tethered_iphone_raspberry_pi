@@ -11,7 +11,7 @@ How to setup Internet sharing with an iPhone and raspberry pi
 Name=br0
 Kind=bridge
 
-6. Make eth0 member of the bridge: **sudo nano /etc/systemd/network/br0-member-eth0.network**
+6. Make eth0 member of the bridge: sudo nano /etc/systemd/network/br0-member-eth0.network
 
 [Match]
 Name=eth0
@@ -19,7 +19,7 @@ Name=eth0
 [Network]
 Bridge=br0
 
-6. Make eth1 member of the bridge: **sudo nano /etc/systemd/network/br0-member-eth1.network**
+6. Make eth1 member of the bridge: sudo nano /etc/systemd/network/br0-member-eth1.network
 
 [Match]
 Name=eth1
