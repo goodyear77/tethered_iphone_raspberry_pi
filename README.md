@@ -44,8 +44,8 @@ denyinterfaces eth0 eth1
 
 10. Comment out following:
 
-# It is possible to fall back to a static IP if DHCP fails:
-# define static profile
+-# It is possible to fall back to a static IP if DHCP fails:
+-# define static profile
 profile static_eth0
 static ip_address=192.168.0.65/24
 static routers=192.168.0.1
