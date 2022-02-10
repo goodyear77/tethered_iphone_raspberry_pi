@@ -69,7 +69,7 @@ pi# sudo nano /etc/dhcpcd.conf
 # Disable DHCP on interfaces that are bridged:
 denyinterfaces eth0 eth1
 
-9.2 Comment out following in the static IP section:
+9.2 Comment out following in the static IP section (change IP information to fit your network):
 
 # It is possible to fall back to a static IP if DHCP fails:
 # define static profile
