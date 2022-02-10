@@ -2,6 +2,7 @@
 How to setup Internet sharing with an iPhone and raspberry pi
 
 1. Install Raspian on raspberry pi: https://www.raspberrypi.com/software/
+
 2. Update and upgrade system: 
 
 pi# sudo apt update & sudo apt upgrade
