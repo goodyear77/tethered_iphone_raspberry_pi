@@ -24,6 +24,8 @@ pi# sudo nano /etc/systemd/network/bridge-br0.netdev
 Name=br0
 Kind=bridge
 
+5.2 Ctrl+X to save and exit.
+
 6. Make eth0 member of the bridge: 
 
 pi# sudo nano /etc/systemd/network/br0-member-eth0.network
@@ -35,6 +37,8 @@ Name=eth0
 
 [Network]
 Bridge=br0
+
+6.2 Ctrl+X to save and exit.
 
 7. Make eth1 member of the bridge: 
 
@@ -48,6 +52,8 @@ Name=eth1
 [Network]
 Bridge=br0
 
+7.2 Ctrl+X to save and exit.
+
 8. Enable the systemd-networkd service to create and populate the bridge when your Raspberry Pi boots:
 
 pi# sudo systemctl enable systemd-networkd
@@ -58,12 +64,12 @@ pi# sudo cp /etc/dhcpcd.conf /etc/dhcpcd.conf.back
 
 pi# sudo nano /etc/dhcpcd.conf
 
-10. Add to the top of the file:
+9.1 Add to the top of the file:
 
 # Disable DHCP on interfaces that are bridged:
 denyinterfaces eth0 eth1
 
-11. Comment out following in the static IP section:
+9.2 Comment out following in the static IP section:
 
 # It is possible to fall back to a static IP if DHCP fails:
 # define static profile
@@ -76,15 +82,17 @@ static domain_name_servers=192.168.0.1
 interface eth0
 fallback static_eth0
 
-12. Add as last lines:
+9.3 Add as last lines:
 
 # Add bridged interface:
 interface br0
 
-13. Reboot: 
+9.4 Ctrl+X to save and exit.
+
+10. Reboot: 
 
 pi# sudo reboot now
 
-14: Connect iPhone via USB and connect Ethernet to laptop and check you get an IP on your laptop from the iPhone (typically 172-range): 
+11: Connect iPhone via USB and connect Ethernet to laptop and check you get an IP on your laptop from the iPhone (typically 172-range): 
 
 pi# sudo ifconfig -a
