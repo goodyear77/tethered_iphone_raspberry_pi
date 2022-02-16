@@ -1,5 +1,8 @@
 # tethered_iphone_raspberry_pi
+
 How to setup Internet sharing with an iPhone and raspberry pi
+
+NOTE: this setup is for a raspberry pi 2 without Wi-Fi, for newer models with Wi-Fi you'll probably see an interface called 'wlan0' which should be added to the bridge/disabled, and should be stopped from handing out IP-adresses (step 9.1).
 
 1. Install Raspian on raspberry pi: https://www.raspberrypi.com/software/
 
